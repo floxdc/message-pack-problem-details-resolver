@@ -6,7 +6,7 @@ namespace MessagePack.ProblemDetails
 {
     public class ProblemDetailsMessagePackFormatter : IMessagePackFormatter<Microsoft.AspNetCore.Mvc.ProblemDetails>
     {
-        public static readonly ProblemDetailsMessagePackFormatter Instance = new ProblemDetailsMessagePackFormatter();
+        public static readonly ProblemDetailsMessagePackFormatter Instance = new();
 
 
         public Microsoft.AspNetCore.Mvc.ProblemDetails Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
@@ -17,7 +17,7 @@ namespace MessagePack.ProblemDetails
             var count = reader.ReadArrayHeader();
             if (count != HeaderCount)
                 throw new InvalidOperationException(
-                    $"A mismatch was occured between serialized and deserialized header counts in {nameof(ProblemDetailsMessagePackFormatter)}");
+                    $"A mismatch was occurred between serialized and deserialized header counts in {nameof(ProblemDetailsMessagePackFormatter)}");
 
             var detail = reader.ReadString();
             var instance = reader.ReadString();
