@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net5.0;net6.0;net8.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>Flox DC</Company>
@@ -9,14 +9,14 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>MessagePack MsgPack ProblemDetails</PackageTags>
     <Description>A MessagePack resolver for AspNetCore's ProblemDetails</Description>
-    <Version>1.0.1</Version>
+    <Version>1.0.3</Version>
     <PackageProjectUrl>https://github.com/floxdc/message-pack-problem-details-resolver</PackageProjectUrl>
     <RepositoryUrl>https://github.com/floxdc/message-pack-problem-details-resolver</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="MessagePack" Version="2.4.35" />
+    <PackageReference Include="MessagePack" Version="2.5.187" />
   </ItemGroup>
 
 </Project>
